@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import { ThirdContainer } from "./style";
+import { SkillContainer } from "./style";
 
-function Third({ isFinish }) {
+function Skill({ isFinish }) {
   const [show, setShow] = useState(false);
   const [isClickedFirst, setIsClickedFirst] = useState(true);
   const [isClickedSecond, setIsClickedSecond] = useState(true);
@@ -49,7 +49,7 @@ function Third({ isFinish }) {
   };
 
   return (
-    <ThirdContainer className="third" isFinish={isFinish}>
+    <SkillContainer className="skill" isFinish={isFinish}>
       <div>
         <Fade when={show} top>
           <a href="/" style={{ textDecoration: "none", color: "#17395c" }}>
@@ -75,8 +75,8 @@ function Third({ isFinish }) {
           </Fade>
         </div>
       </div>
-    </ThirdContainer>
+    </SkillContainer>
   );
 }
 
-export default Third;
+export default Skill;

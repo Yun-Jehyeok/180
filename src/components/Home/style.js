@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FirstContainer = styled.div`
+export const HomeContainer = styled.div`
   position: absolute;
   top: 0;
   left: ${(props) => (props.isFinish ? "-100%" : "0")};

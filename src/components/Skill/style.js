@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ThirdContainer = styled.div`
+export const SkillContainer = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;

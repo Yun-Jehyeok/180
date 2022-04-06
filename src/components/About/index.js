@@ -1,10 +1,10 @@
-import Third from "components/Third";
+import Skill from "components/Skill";
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import { Introduce, SecondContainer } from "./style";
+import { Introduce, AboutContainer } from "./style";
 import "./style.css";
 
-function Second() {
+function About() {
   const [isFinish, setIsFinish] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function Second() {
 
   return (
     <div>
-      <SecondContainer className="second" isFinish={isFinish}>
+      <AboutContainer className="about" isFinish={isFinish}>
         <div>
           <Fade when={show} top>
             <a href="/" style={{ textDecoration: "none", color: "white" }}>
@@ -49,10 +49,10 @@ function Second() {
             <div className="icon-scroll"></div>
           </Fade>
         </div>
-      </SecondContainer>
-      <Third isFinish={isFinish} />
+      </AboutContainer>
+      <Skill isFinish={isFinish} />
     </div>
   );
 }
 
-export default Second;
+export default About;

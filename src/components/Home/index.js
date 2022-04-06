@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
-import { FirstContainer } from "./style";
+import { HomeContainer } from "./style";
 
-function First() {
+function Home() {
   const [isFinish, setIsFinish] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -28,12 +28,12 @@ function First() {
   });
 
   return (
-    <FirstContainer className="title" isFinish={isFinish}>
+    <HomeContainer className="title" isFinish={isFinish}>
       <Fade when={show} left>
         180
       </Fade>
-    </FirstContainer>
+    </HomeContainer>
   );
 }
 
-export default First;
+export default Home;
