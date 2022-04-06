@@ -20,15 +20,20 @@ function Home() {
     }, 2500);
     setTimeout(() => {
       title.innerHTML = "177";
-    }, 3500);
-    setTimeout(() => {
-      title.innerHTML = "176";
       setIsFinish(true);
-    }, 4500);
+    }, 3500);
   });
 
+  const preventScroll = (e) => {
+    // 여기서 스크롤
+  };
+
   return (
-    <HomeContainer className="title" isFinish={isFinish}>
+    <HomeContainer
+      className="title"
+      isFinish={isFinish}
+      onScroll={preventScroll}
+    >
       <Fade when={show} left>
         180
       </Fade>

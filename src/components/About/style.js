@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// fixed로 바꾸고 top도 그대로 두고 left = 100vw 두고
+// scrollTo를 써야지 이렇게 쓰면 안됨
 export const AboutContainer = styled.div`
   z-index: 900;
   width: 100%;

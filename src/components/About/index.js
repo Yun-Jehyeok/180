@@ -1,11 +1,12 @@
-import Skill from "components/Skill";
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
+import Skill from "components/Skill";
 import { Introduce, AboutContainer } from "./style";
 import "./style.css";
 
 function About() {
   const [isFinish, setIsFinish] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -17,12 +18,10 @@ function About() {
     });
   }, []);
 
-  const [show, setShow] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 5500);
+    }, 4500);
   }, []);
 
   return (
