@@ -25,7 +25,7 @@ export const ThirdContainer = styled.div`
   & > div:last-child {
     width: 100%;
     height: 100%;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bolder;
     display: flex;
     justify-content: center;

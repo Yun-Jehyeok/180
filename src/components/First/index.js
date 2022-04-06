@@ -7,18 +7,30 @@ function First() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    let title = document.querySelector(".title");
+
     setTimeout(() => {
       setShow(true);
     }, 300);
     setTimeout(() => {
+      title.innerHTML = "179";
+    }, 1500);
+    setTimeout(() => {
+      title.innerHTML = "178";
+    }, 2500);
+    setTimeout(() => {
+      title.innerHTML = "177";
+    }, 3500);
+    setTimeout(() => {
+      title.innerHTML = "176";
       setIsFinish(true);
-    }, 3000);
+    }, 4500);
   });
 
   return (
-    <FirstContainer isFinish={isFinish}>
+    <FirstContainer className="title" isFinish={isFinish}>
       <Fade when={show} left>
-        60
+        180
       </Fade>
     </FirstContainer>
   );

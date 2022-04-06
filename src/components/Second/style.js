@@ -46,7 +46,7 @@ export const SecondContainer = styled.div`
 `;
 
 export const Introduce = styled.div`
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bolder;
 
   & > span {

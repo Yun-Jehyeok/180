@@ -11,32 +11,41 @@ function Third({ isFinish }) {
     if (isFinish) {
       setTimeout(() => {
         setShow(true);
-      }, 1100);
+      }, 400);
     }
   }, [isFinish]);
 
-  const isClickContent = (number) => {
-    let el = document.querySelectorAll(".content")[number];
+  const isClickContent = (clickIdx) => {
+    let el = document.querySelectorAll(".content")[clickIdx];
+    el.style.transition = "none";
 
-    if (number === 0) {
+    if (clickIdx === 0) {
       if (isClickedFirst) {
         el.innerHTML =
           "<div><div>HTML</div>&nbsp;&nbsp;<div>CSS</div>&nbsp;&nbsp;<div>JAVASCRIPT</div></div><div><div>REACT</div>&nbsp;&nbsp;<div>AURA COMPONENT</div>&nbsp;&nbsp;<div>LWC</div></div>";
+        el.style.fontSize = "3rem";
       } else {
         el.innerHTML = "FRONT-END";
+        el.style.fontSize = "5rem";
       }
 
       setIsClickedFirst(!isClickedFirst);
-    } else if (number === 1) {
+    } else if (clickIdx === 1) {
       if (isClickedSecond) {
         el.innerHTML =
           "<div><div>MONGO DB</div>&nbsp;&nbsp;<div>NODE JS</div>&nbsp;&nbsp;<div>EXPRESS JS</div></div>";
+        el.style.fontSize = "3rem";
       } else {
         el.innerHTML = "BACK-END";
+        el.style.fontSize = "5rem";
       }
 
       setIsClickedSecond(!isClickedSecond);
     }
+
+    setTimeout(() => {
+      el.style.transition = "all 0.25s linear";
+    }, 50);
   };
 
   return (
