@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 import { HomeContainer } from "./style";
 
 function Home() {
-  const [isFinish, setIsFinish] = useState(false);
+  const [isHide, setIsHide] = useState(false);
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -20,20 +20,12 @@ function Home() {
     }, 2500);
     setTimeout(() => {
       title.innerHTML = "177";
-      setIsFinish(true);
+      setIsHide(true);
     }, 3500);
   });
 
-  const preventScroll = (e) => {
-    // 여기서 스크롤
-  };
-
   return (
-    <HomeContainer
-      className="title"
-      isFinish={isFinish}
-      onScroll={preventScroll}
-    >
+    <HomeContainer className="title" isHide={isHide}>
       <Fade when={show} left>
         180
       </Fade>

@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
 export const SkillContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: ${(props) => (props.isFinish ? "0" : "100%")};
+  width: 100vw;
+  height: 100vh;
   background-color: #a3c3ce;
-
-  transition: all 1s cubic-bezier(0.24, 0.77, 0.32, 0.95);
 
   & > div:first-child {
     width: 100%;
@@ -18,8 +14,6 @@ export const SkillContainer = styled.div`
     justify-content: center;
     flex: 0 0 auto;
     align-items: center;
-    position: absolute;
-    top: 0;
   }
 
   & > div:last-child {
@@ -55,7 +49,3 @@ export const SkillContainer = styled.div`
     }
   }
 `;
-
-// export const Left = styled.div`
-
-// `;

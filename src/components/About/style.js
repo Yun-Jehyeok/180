@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
-// fixed로 바꾸고 top도 그대로 두고 left = 100vw 두고
-// scrollTo를 써야지 이렇게 쓰면 안됨
 export const AboutContainer = styled.div`
-  z-index: 900;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
   background-color: #00483c;
   color: white;
-  top: ${(props) => (props.isFinish ? "-100%" : "0")};
-  left: 0;
-  transition: all 1s cubic-bezier(0.24, 0.77, 0.32, 0.95);
-  overflow: hidden;
+
+  position: relative;
 
   & > div:first-child {
     width: 100%;
@@ -36,14 +31,6 @@ export const AboutContainer = styled.div`
     justify-content: center;
     flex: 0 0 auto;
     align-items: center;
-  }
-
-  & > div:last-child {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
   }
 `;
 

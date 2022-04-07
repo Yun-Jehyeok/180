@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
 import { SkillContainer } from "./style";
 
-function Skill({ isFinish }) {
+function Skill({ location }) {
   const [show, setShow] = useState(false);
   const [isClickedFirst, setIsClickedFirst] = useState(true);
   const [isClickedSecond, setIsClickedSecond] = useState(true);
 
   useEffect(() => {
-    if (isFinish) {
+    if (location === "Skill") {
       setTimeout(() => {
         setShow(true);
       }, 400);
     }
-  }, [isFinish]);
+  }, [location]);
 
   const isClickContent = (clickIdx) => {
     let el = document.querySelectorAll(".content")[clickIdx];
@@ -49,7 +49,7 @@ function Skill({ isFinish }) {
   };
 
   return (
-    <SkillContainer className="skill" isFinish={isFinish}>
+    <SkillContainer className="skill">
       <div>
         <Fade when={show} top>
           <a href="/" style={{ textDecoration: "none", color: "#17395c" }}>
