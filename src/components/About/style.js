@@ -8,6 +8,7 @@ export const AboutContainer = styled.div`
   color: white;
 
   position: relative;
+  top: 0;
 
   & > div:first-child {
     width: 100%;

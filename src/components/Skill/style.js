@@ -5,9 +5,14 @@ export const SkillContainer = styled.div`
   height: 100vh;
   background-color: #a3c3ce;
 
+  position: relative;
+
   & > div:first-child {
     width: 100%;
     height: 20%;
+    position: absolute;
+    top: 0;
+
     font-size: 4rem;
     font-weight: bolder;
     display: flex;

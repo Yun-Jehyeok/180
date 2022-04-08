@@ -4,21 +4,16 @@ import About from "components/About";
 import Project from "components/Project";
 import Skill from "components/Skill";
 
-function Section() {
+function Section({ loc }) {
   return (
     <div
       style={{
         width: "100vw",
-        overflow: "hidden",
-        zIndex: "500",
-        position: "absolute",
-        top: "0",
-        left: "0",
       }}
     >
       <About />
-      <Skill />
-      <Project />
+      <Skill location={loc} />
+      <Project location={loc} />
     </div>
   );
 }

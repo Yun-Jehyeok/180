@@ -49,7 +49,7 @@ function Skill({ location }) {
   };
 
   return (
-    <SkillContainer className="skill">
+    <SkillContainer id="skill">
       <div>
         <Fade when={show} top>
           <a href="/" style={{ textDecoration: "none", color: "#17395c" }}>

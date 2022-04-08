@@ -15,7 +15,7 @@ function About() {
     <AboutContainer>
       <div>
         <Fade when={show} top>
-          <a href="/" style={{ textDecoration: "none", color: "white" }}>
+          <a href="/" style={{ textDecoration: "none", color: "#A3C3CE" }}>
             ABOUT
           </a>
         </Fade>

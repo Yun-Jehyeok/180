@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Helmet from "react-helmet";
 import Fade from "react-reveal/Fade";
 
 import { Container, MouseScrollIcon } from "style";
@@ -29,20 +30,15 @@ function App() {
     }, 4500);
   }, []);
 
-  // 스크롤 이벤트만 해결하면 됨
-  // 왜 beforePosition, afterPosition을 못쓰겠는지는 모르겠다...
-
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      let currentPosition = document.documentElement.scrollTop;
-
-      if (currentPosition > 0) {
+    document.addEventListener("wheel", (e) => {
+      if (e.deltaY > 0) {
         if (location === "About") {
           setLocation("Skill");
         } else if (location === "Skill") {
           setLocation("Project");
         }
-      } else {
+      } else if (e.deltaY < 0) {
         if (location === "Skill") {
           setLocation("About");
         } else if (location === "Project") {
@@ -54,9 +50,12 @@ function App() {
 
   return (
     <Container loc={location}>
+      <Helmet>
+        <title>{location}</title>
+      </Helmet>
       <Home />
-      <Section />
-      <MouseScrollIcon>
+      <Section loc={location} />
+      <MouseScrollIcon loc={location}>
         <Fade when={show} bottom>
           <div className="icon-scroll"></div>
         </Fade>
